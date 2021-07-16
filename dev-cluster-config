@@ -1,0 +1,19 @@
+apiVersion: v1
+clusters:
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://rancher.bsb.ge/k8s/clusters/c-bfd2q
+  name: dev-cluster-bsb
+contexts:
+- context:
+    cluster: dev-cluster-bsb
+    namespace: bb-app
+    user: rancher-bsb-lado
+  name: dev-cluster-lado
+current-context: dev-cluster-lado
+kind: Config
+preferences: {}
+users:
+- name: rancher-bsb-lado
+  user:
+    token: kubeconfig-u-lhq6f.c-bfd2q:pvdhvrt67hd5xn9vzm47wjl6n6v9jz7qfqg5679dhq7ld44wdstrqv
